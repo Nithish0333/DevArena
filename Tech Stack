@@ -1,0 +1,27 @@
+Backend:
+
+Django
+
+Django REST Framework
+
+PostgreSQL / MySQL
+
+Frontend:
+
+React.js
+
+Monaco Editor (VS Code editor)
+
+Code Execution:
+
+Judge0 API OR Docker-based runner
+
+Auth:
+
+Django Auth + JWT
+
+Deployment:
+
+Backend: Render / Railway
+
+Frontend: Vercel / Netlify

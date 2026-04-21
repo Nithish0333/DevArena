@@ -16,6 +16,12 @@
     }
   ],
   "env": {
-    "REACT_APP_API_URL": "@react-app-api-url"
+    "REACT_APP_API_URL": "@react-app-api-url",
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs18.x"
+    }
   }
 }

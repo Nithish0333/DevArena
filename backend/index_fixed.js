@@ -491,10 +491,22 @@ app.post('/api/execute', [
   }
 });
 
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.status(200).json({
+    status: 'OK',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    environment: process.env.NODE_ENV || 'development',
+    database: 'SQLite',
+    version: '1.0.0'
+  });
+});
+
 // Error handling
 app.use((err, req, res, next) => {
   console.error('Error:', err);
-  res.status(500).json({ message: 'Something went wrong!' });
+  res.status(500).json({ message: 'Internal server error' });
 });
 
 app.use((req, res) => {

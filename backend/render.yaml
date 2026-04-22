@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: devarena-backend
+    env: node
+    plan: starter
+    buildCommand: "npm install && npm run build"
+    startCommand: "npm start"
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: JWT_SECRET
+        value: your-super-secret-jwt-key-change-this-to-random-string
+      - key: CORS_ORIGIN
+        value: https://teal-speculoos-8e4b82.netlify.app
+      - key: DATABASE_PATH
+        value: /opt/render/project/data/devarena.db
+    disk:
+      name: data
+      mountPath: /opt/render/project/data
+      sizeGB: 1

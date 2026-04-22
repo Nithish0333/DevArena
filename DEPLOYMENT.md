@@ -3,13 +3,13 @@
 ## Overview
 This guide will help you deploy DevArena with:
 - **Frontend**: Netlify (React SPA)
-- **Backend**: Northflank (Node.js + Express + SQLite)
+- **Backend**: Render (Node.js + Express + SQLite)
 - **Database**: SQLite (file-based)
 
 ## Prerequisites
 - Git repository with your code
 - Netlify account
-- Northflank account
+- Render account
 - Domain names (optional)
 
 ## Frontend Deployment (Netlify)
@@ -36,31 +36,33 @@ The `netlify.toml` file is already configured with:
 
 ### 3. Environment Variables
 In Netlify dashboard (Site settings → Build & deploy → Environment), set:
-- `REACT_APP_API_URL`: Your Northflank backend URL
+- `REACT_APP_API_URL`: Your Render backend URL
 - `NODE_ENV`: production
 
-## Backend Deployment (Northflank)
+## Backend Deployment (Render)
 
-### 1. Create Northflank Service
-1. Go to Northflank dashboard
-2. Create new service
-3. Choose "Docker" service type
-4. Connect your Git repository
+### 1. Create Render Service
+1. Go to [Render Dashboard](https://render.com)
+2. Click "New +"
+3. Select "Web Service"
+4. Connect your Git repository: `Nithish0333/DevArena`
+5. Select branch: `main`
 
-### 2. Docker Configuration
-The `Dockerfile` is configured with:
-- Node.js 18 Alpine
-- SQLite database support
+### 2. Render Configuration
+The `render.yaml` file is already configured with:
+- Node.js runtime
+- Starter plan (free tier)
 - Health checks
-- Non-root user
+- Persistent storage
+- Environment variables
 
 ### 3. Environment Variables
-Set these in Northflank:
+Render automatically uses the `render.yaml` configuration:
 - `NODE_ENV`: production
 - `PORT`: 5000
-- `JWT_SECRET`: Generate a secure random string
-- `CORS_ORIGIN`: Your Vercel frontend URL
-- `DATABASE_PATH`: /app/data/devarena.db
+- `JWT_SECRET`: Your secure JWT secret
+- `CORS_ORIGIN`: https://teal-speculoos-8e4b82.netlify.app
+- `DATABASE_PATH`: /opt/render/project/data/devarena.db
 
 ### 4. Volume Mounting
 Create a persistent volume at `/app/data` to store the SQLite database.

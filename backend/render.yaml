@@ -2,8 +2,8 @@ services:
   - type: web
     name: devarena-backend
     env: node
-    plan: starter
-    buildCommand: "npm install && npm run build"
+    plan: free
+    buildCommand: "npm install"
     startCommand: "npm start"
     healthCheckPath: /api/health
     envVars:
@@ -16,8 +16,4 @@ services:
       - key: CORS_ORIGIN
         value: https://teal-speculoos-8e4b82.netlify.app
       - key: DATABASE_PATH
-        value: /opt/render/project/data/devarena.db
-    disk:
-      name: data
-      mountPath: /opt/render/project/data
-      sizeGB: 1
+        value: ./devarena.db

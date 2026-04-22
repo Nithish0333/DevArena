@@ -493,6 +493,11 @@ app.post('/api/execute', [
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
+  const sequelize = new Sequelize({
+    dialect: 'sqlite',
+    storage: process.env.DATABASE_PATH || './devarena.db',
+    logging: process.env.NODE_ENV === 'development' ? console.log : false
+  });
   res.status(200).json({
     status: 'OK',
     timestamp: new Date().toISOString(),

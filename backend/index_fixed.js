@@ -520,7 +520,6 @@ app.get('/api/health', (req, res) => {
       console.error('Supabase error:', error);
       res.status(500).json({ message: 'Server error' });
     });
-    version: '1.0.0'
   });
 });
 

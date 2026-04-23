@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index_fixed.js",
-    "dev": "node index_fixed.js",
+    "start": "node index_simple.js",
+    "dev": "node index_simple.js",
     "seed": "node utils/seedSQLite.js",
     "seed-mongo": "node utils/seedDatabase.js",
     "start-mongo": "node index.js",

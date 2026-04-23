@@ -4,7 +4,7 @@ services:
     env: node
     plan: free
     buildCommand: "npm install"
-    startCommand: "npm start"
+    startCommand: "node index_simple.js"
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
@@ -15,8 +15,6 @@ services:
         value: your-super-secret-jwt-key-change-this-to-random-string
       - key: CORS_ORIGIN
         value: https://teal-speculoos-8e4b82.netlify.app
-      - key: DATABASE_URL
-        value: postgresql://postgres:NithishR12345678@db.jhrudhacgkmrogpzqmgs.supabase.co:5432/postgres
       - key: DATABASE_URL
         value: postgresql://postgres:[YOUR-PASSWORD]@db.[YOUR-PROJECT-REF].supabase.co:5432/postgres
       - key: DATABASE_HOST

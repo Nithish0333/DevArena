@@ -16,6 +16,8 @@ services:
       - key: CORS_ORIGIN
         value: https://teal-speculoos-8e4b82.netlify.app
       - key: DATABASE_URL
+        value: postgresql://postgres:NithishR12345678@db.jhrudhacgkmrogpzqmgs.supabase.co:5432/postgres
+      - key: DATABASE_URL
         value: postgresql://postgres:[YOUR-PASSWORD]@db.[YOUR-PROJECT-REF].supabase.co:5432/postgres
       - key: DATABASE_HOST
         value: db.[YOUR-PROJECT-REF].supabase.co

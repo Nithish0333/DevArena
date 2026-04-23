@@ -15,5 +15,5 @@ services:
         value: your-super-secret-jwt-key-change-this-to-random-string
       - key: CORS_ORIGIN
         value: https://teal-speculoos-8e4b82.netlify.app
-      - key: DATABASE_PATH
-        value: ./devarena.db
+      - key: DATABASE_URL
+        value: postgresql://postgres.supabase-admin:[YOUR-SUPABASE-KEY]@supabase-admin:[YOUR-SUPABASE-KEY].supabase.co:5432/postgres

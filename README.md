@@ -18,6 +18,20 @@ A full-stack coding platform similar to HackerRank and W3Schools with integrated
 - User progress tracking
 - Bookmark system
 - Submission history
+
+## Deployment
+
+### Frontend
+[![Netlify Status](https://api.netlify.com/api/v1/badges/855937e8-b205-4570-85be-47460eae2b80/deploy-status)]
+
+**URL**: https://teal-speculoos-8e4b82.netlify.app
+
+### Backend
+[![Render Status](https://api.render.com/api/v1/services/855937e8-b205-4570-85be-47460eae2b80/status)]
+
+**URL**: https://devarena-backend.onrender.com
+
+**Health Check**: https://devarena-backend.onrender.com/api/health
 - Leaderboard
 - Gamification (points, badges, streaks)
 - Dark theme and responsive design

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index_minimal.js",
-    "dev": "node index_minimal.js",
+    "start": "node index_basic.js",
+    "dev": "node index_basic.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

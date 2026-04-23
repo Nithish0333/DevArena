@@ -15,15 +15,3 @@ services:
         value: your-super-secret-jwt-key-change-this-to-random-string
       - key: CORS_ORIGIN
         value: https://teal-speculoos-8e4b82.netlify.app
-      - key: DATABASE_URL
-        value: postgresql://postgres:[YOUR-PASSWORD]@db.[YOUR-PROJECT-REF].supabase.co:5432/postgres
-      - key: DATABASE_HOST
-        value: db.[YOUR-PROJECT-REF].supabase.co
-      - key: DATABASE_PORT
-        value: 5432
-      - key: DATABASE_NAME
-        value: postgres
-      - key: DATABASE_USER
-        value: postgres
-      - key: DATABASE_PASSWORD
-        value: [YOUR-PASSWORD]
